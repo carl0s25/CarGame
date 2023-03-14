@@ -106,6 +106,23 @@ void gameover(){
 	cout<<"\t\tPress any key to go back to menu.";
 	getch();
 }
+
+void ganar (){
+  
+system ("cls");
+  
+cout << endl;
+  
+cout << "\t\t--------------------------" << endl;
+cout << "\t\t-------- Congratulations -------" << endl;
+cout << "\t\t-------- You Are Winner -------" << endl;
+cout << "\t\t--------------------------" << endl << endl;
+cout << "\t\tPress any key to go back to menu.";
+  
+getch ();
+
+} 
+
 void updateScore(){
 	gotoxy(WIN_WIDTH + 7, 5);cout<<"Score: "<<score<<endl;
 }
@@ -196,6 +213,12 @@ void play(){
 			score++;
 			updateScore();
 		}
+		
+		if (score == 10){
+		ganar ();
+		return;
+		}
+		
 	}
 }
 
